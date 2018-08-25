@@ -1,0 +1,25 @@
+<saml2p:Response xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol" Destination="https://idp.example.com/auth" ID="1a3f38aac4327c6a8bfa6104ef220d38" InResponseTo="295f153dc60582c61bb2a3080b682a06" IssueInstant="2018-08-13T12:54:06.119Z" Version="2.0">
+	<saml2:Issuer xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">https://idp.example.com</saml2:Issuer>
+	<saml2p:Status>
+		<saml2p:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success"/>
+	</saml2p:Status>
+	<saml2:Assertion xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion" ID="3e23ccc5f7756d82cf76ace79eb28110" IssueInstant="2018-08-13T12:54:06.119Z" Version="2.0">
+		<saml2:Issuer>https://idp.example.com</saml2:Issuer>
+		<saml2:Subject>
+			<saml2:NameID Format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent">some-id@example.com</saml2:NameID>
+			<saml2:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+				<saml2:SubjectConfirmationData InResponseTo="295f153dc60582c61bb2a3080b682a06" NotOnOrAfter="2018-08-13T14:54:06.119Z" Recipient="https://sp.example.com/saml/acs"/>
+			</saml2:SubjectConfirmation>
+		</saml2:Subject>
+		<saml2:Conditions NotBefore="2018-08-13T12:54:06.119Z" NotOnOrAfter="2018-08-13T14:54:06.119Z">
+			<saml2:AudienceRestriction>
+				<saml2:Audience>https://sp.example.com</saml2:Audience>
+			</saml2:AudienceRestriction>
+		</saml2:Conditions>
+		<saml2:AuthnStatement AuthnInstant="2018-08-13T12:54:06.119Z">
+			<saml2:AuthnContext>
+				<saml2:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:unspecified</saml2:AuthnContextClassRef>
+			</saml2:AuthnContext>
+		</saml2:AuthnStatement>
+	</saml2:Assertion>
+</saml2p:Response>
