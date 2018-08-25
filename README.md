@@ -1,7 +1,7 @@
 # signatures
 Source code to manually generate a Signature for your SAML 2.0 Response 
 
-#How to run
+## How to run
 
 mvn clean install exec:java -Dexec.mainClass="com.example.OpenSamlSignatures"
 
